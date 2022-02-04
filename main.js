@@ -112,3 +112,7 @@ const icons = [
 		color: 'blue'
 	}
 ];
+
+// Creo variabile per il cont. Html
+
+const container = document.getElementById('icons-container')

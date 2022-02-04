@@ -3,3 +3,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    width: 95%;
+    margin: auto;
+}
+
+.header-top {
+    width: 100%;
+
+}
+
+.logo {
+    font-size: 40px;
+    color: rgb(41, 177, 221);
+    padding: 20px 0;
+    margin-left: 20px;
+}
+
+.header-bottom {
+    background-color: rgb(41, 177, 221);
+    padding: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#icons-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 200px;
+    border: 1px solid black;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon i {
+    font-size: 60px;
+}
