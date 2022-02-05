@@ -24,6 +24,15 @@ header {
 .header-bottom {
     background-color: rgb(41, 177, 221);
     padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.span-text {
+    color: white;
+    text-transform: uppercase;
+    margin-right: 5px;
+    font-size: 25px;
 }
 
 .container {
@@ -39,14 +48,15 @@ header {
 }
 
 .icon {
-    width: 200px;
+    width: calc(100% / 6);
     border: 1px solid black;
-    height: 150px;
+    height: 130px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px 10px;
 }
 
 .icon i {

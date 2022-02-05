@@ -115,4 +115,17 @@ const icons = [
 
 // Creo variabile per il cont. Html
 
-const container = document.getElementById('icons-container')
+const container = document.getElementById('icons-container');
+
+let content = '';
+
+icons.forEach(oggetto => {
+
+        content += `<div class="icon">
+                        <i style="color:${oggetto.color};" class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"></i>
+                        <div>${oggetto.name}</div>
+                    </div>`;
+
+});
+
+container.innerHTML = content;
