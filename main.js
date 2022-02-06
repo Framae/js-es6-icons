@@ -117,15 +117,42 @@ const icons = [
 
 const container = document.getElementById('icons-container');
 
-let content = '';
+drawIcons(container, icons);
 
-icons.forEach(oggetto => {
+const selector = document.getElementById('type-filter');
+
+selector.addEventListener('change', function() {
+
+    let selection = this.value;
+
+    if (selection == "") {
+        drawIcons(container, icons);
+    } else {
+        const filtered = icons.filter(icon => {
+            if (icon.type == selection) {
+                return true;
+            }
+            return false;
+        });
+    
+        drawIcons(container, filtered);
+    }
+
+});
+
+function drawIcons(container, icons) {
+
+    let content = '';
+
+    icons.forEach(oggetto => {
 
         content += `<div class="icon">
                         <i style="color:${oggetto.color};" class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"></i>
                         <div>${oggetto.name}</div>
                     </div>`;
 
-});
+    });
 
-container.innerHTML = content;
+    container.innerHTML = content;
+
+};
